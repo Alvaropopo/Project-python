@@ -15,8 +15,14 @@
 #             alva
 #             alvar
 #             alvaro
-text=input("input a word: ")
-for i in range(len(text)):
-    for index in range(i+1):
-        print (text[index],end="")
-    print()
+# text=input("input a word: ")
+# for i in range(len(text)):
+#     for index in range(i+1):
+#         print (text[index],end="")
+#     print()
+
+for i in range (1,11):
+    print(i,end= " ")
+number= int(input("input a number: "))
+for i in range(1,number + 1):
+    print("*"*i)
