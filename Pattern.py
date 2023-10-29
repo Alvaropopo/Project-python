@@ -21,8 +21,10 @@
 #         print (text[index],end="")
 #     print()
 
-for i in range (1,11):
-    print(i,end= " ")
+# for i in range (1,11):
+#     print(i,end= " ")
 number= int(input("input a number: "))
-for i in range(1,number + 1):
+for i in range(1,number + 1,1):
+    print("*"*i)
+for i in range(number,0 ,-1):
     print("*"*i)
