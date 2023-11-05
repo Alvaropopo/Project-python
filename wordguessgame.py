@@ -1,4 +1,5 @@
 import random
+import numpy  as np
 
 # List of 100 random words
 random_words = ['apple', 'banana', 'orange', 'grape', 'kiwi', 'melon', 'strawberry', 'blueberry', 'pineapple', 'peach',
@@ -14,22 +15,37 @@ random_words = ['apple', 'banana', 'orange', 'grape', 'kiwi', 'melon', 'strawber
 
 index=random.randint(0,99)
 result=(random_words[index])
+length=len(np.unique(list(result)))
+# print (length)
 print(" _ "*len(result))
 # print(result)
 answer=""
 right=0
-while(right>=len(result)):
+wrong=0
+lives=10
+lose=False
+while True:
     print()
     letter=input("input a letter: ")
+   
+    if letter in result:
+        if letter not in answer:
+            right+=1
+    else:
+        wrong+=1
     answer+=letter
-    
-    wrong=0
     for i in result:
         if i in answer:
             print(i,end=" ")
-            right+=1
         else:
             print("_",end=" ")
-            wrong=1
-    print(answer)
-
+    print(wrong)
+    if(right==length):
+        break
+    if(wrong==lives):
+        lose=True
+        break
+if(not lose):
+    print("Congratulation, You win siuuuuuuuu")
+else:
+    print("You lose, boooooooooo, the answer is",result)
