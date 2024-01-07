@@ -1,0 +1,13 @@
+import os
+F = open("Text.txt","r")
+print(F.readlines())
+# F = open("Text.txt","w")
+# F.write("Alvaro punya saudara di Belanda, namanya uncle Eddy dan Robbert")
+# F.close()
+F = open("Text.txt","a")
+F.write("\nAlvaro punya saudara di Belanda, namanya uncle Eddy dan Robbert")
+F.close()
+F = open("Text.txt","r")
+print(F.readline())
+# F = open("Text2.txt","x")
+os.remove("Text2.txt")

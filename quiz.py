@@ -31,8 +31,18 @@ Score=0
 random.shuffle(Qno)
 # print(Qno)
 for i in Qno:
+    print()
     print(questions[i])
     for j in pilihan [i]:
         print(j)
     answer=input("jawaban A, B, C, D?")
-    if(answer)
+    # print(answer,code[3],i)
+    if(i==1 and answer=="D"):
+        Score+=1000
+        print("You are Correct, Die Israel go to the hell")
+    elif(answer==code[jawaban[i]]):
+        Score+=10
+        print("You are Correct, lovely")
+    else:
+        print("You are wrong")
+print("Your Score is :",Score)
