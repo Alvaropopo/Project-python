@@ -32,4 +32,4 @@ import numpy as np
 # print(x1)
 
 x1=np.arange(30,100)
-print(x1)
+print(x1.sum())
