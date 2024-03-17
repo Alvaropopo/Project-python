@@ -8,5 +8,8 @@ sb.set()
 # plt.show()
 
 datatips=sb.load_dataset("tips")
-sb.relplot(x="total_bill",y="tip",data=datatips,kind="scatter",hue="time",col="sex")
+# sb.relplot(x="total_bill",y="tip",data=datatips,kind="scatter",hue="time",col="sex")
+# plt.show()
+
+sb.catplot(x="sex",y="total_bill",data=datatips,kind="violin")
 plt.show()
